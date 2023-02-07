@@ -9,9 +9,9 @@ public class CafeJava {
     String displayTotalMessage = "Your total is $";
 
     // Menu variables (add yours below)
-    double mochaPrice = 3.5;
+    // double mochaPrice = 3.5;
     double lattePrice = 4.5;
-    double cappuccino = 5.0;
+    // double cappuccino = 5.0;
     double dripCoffee = 2.7;
 
     // Customer name variables (add yours below)
@@ -21,10 +21,10 @@ public class CafeJava {
     String customer4 = "Noah";
 
     // Order completions (add yours below)
-    boolean isReadyOrder1 = false;
+    // boolean isReadyOrder1 = false;
     boolean isReadyOrder2 = false;
-    boolean isReadyOrder3 = false;
-    boolean isReadyOrder4 = false;
+    // boolean isReadyOrder3 = false;
+    // boolean isReadyOrder4 = false;
 
     // APP INTERACTION SIMULATION (Add your code for the challenges below)
     // Example:
