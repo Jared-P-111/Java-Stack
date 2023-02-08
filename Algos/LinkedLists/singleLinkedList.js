@@ -1,7 +1,5 @@
 //prettier-ignore
-const myLinkedList = new Node(
-  1,new Node(2,
-     new Node(3,null)));
+// const myLinkedList = new Node( 1,new Node(2,new Node(3,null)));
 
 class Node {
   constructor(data, next = null) {
@@ -17,7 +15,6 @@ class Node {
 class SinglyLinkedList {
   constructor() {
     this.head = null;
-    this.next = next;
   }
 
   /**
@@ -49,14 +46,13 @@ class SinglyLinkedList {
     if (this.isEmpty()) {
       this.head = newNode;
     } else {
-      //🧈
-      const temp = this.head;
+      let temp = this.head;
 
+      //🧈moves us forward ===>
       while (temp.next) {
         temp = temp.next;
         console.log();
       }
-
       temp.next = newNode;
     }
   }
@@ -87,6 +83,23 @@ class SinglyLinkedList {
     return this;
   }
 
+  /* Creates a new node with the given data and inserts that node at the front
+   * of this list.
+   * - Time: (?).
+   * - Space: (?).
+   * @param {any} data The data for the new node.
+   * @returns {SinglyLinkedList} This list.
+   */
+  insertAtFront(data) {
+    const newNode = new Node(data);
+
+    if (this.isEmpty()) {
+      this.head = newNode;
+    } else {
+      this.h;
+    }
+  }
+
   /**
    * Converts this list into an array containing the data of each node.
    * - Time: O(n) linear.
@@ -111,14 +124,14 @@ class SinglyLinkedList {
   after completing it, uncomment the code.
   */
 
-const emptyList = new SinglyLinkedList();
-const singleNodeList = new SinglyLinkedList().insertAtBackMany([1]);
-const biNodeList = new SinglyLinkedList().insertAtBackMany([1, 2]);
-const firstThreeList = new SinglyLinkedList().insertAtBackMany([1, 2, 3]);
-const secondThreeList = new SinglyLinkedList().insertAtBackMany([4, 5, 6]);
-const unorderedList = new SinglyLinkedList().insertAtBackMany([-5, -10, 4, -3, 6, 1, -7, -2]);
+// const emptyList = new SinglyLinkedList();
+// const singleNodeList = new SinglyLinkedList().insertAtBackMany([1]);
+// const biNodeList = new SinglyLinkedList().insertAtBackMany([1, 2]);
+// const firstThreeList = new SinglyLinkedList().insertAtBackMany([1, 2, 3]);
+// const secondThreeList = new SinglyLinkedList().insertAtBackMany([4, 5, 6]);
+// const unorderedList = new SinglyLinkedList().insertAtBackMany([-5, -10, 4, -3, 6, 1, -7, -2]);
 
-/* node 4 connects to node 1, back to head */
+// /* node 4 connects to node 1, back to head */
 // const perfectLoopList = new SinglyLinkedList().insertAtBackMany([1, 2, 3, 4]);
 // perfectLoopList.head.next.next.next = perfectLoopList.head;
 
@@ -126,7 +139,19 @@ const unorderedList = new SinglyLinkedList().insertAtBackMany([-5, -10, 4, -3, 6
 // const loopList = new SinglyLinkedList().insertAtBackMany([1, 2, 3, 4]);
 // loopList.head.next.next.next = loopList.head.next;
 
-const sortedDupeList = new SinglyLinkedList().insertAtBackMany([1, 1, 1, 2, 3, 3, 4, 5, 5]);
+// const sortedDupeList = new SinglyLinkedList().insertAtBackMany([1, 1, 1, 2, 3, 3, 4, 5, 5]);
 
 // Print your list like so:
-console.log(firstThreeList.toArr());
+// console.log(firstThreeList.toArr());
+
+const SLL = new SinglyLinkedList();
+const node1 = new Node(1);
+const node2 = new Node(2);
+const node3 = new Node(3);
+
+SLL.head = node1;
+console.log(SLL);
+SLL.insertAtBack(2);
+console.log('SLL Head -> ', SLL, 'SLL.head.next -> ', SLL.head.next);
+SLL.insertAtBack(3);
+console.log('SLL Head -> ', SLL, 'SLL.head.next -> ', SLL.head.next);
