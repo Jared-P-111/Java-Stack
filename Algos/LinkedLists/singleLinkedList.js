@@ -91,13 +91,18 @@ class SinglyLinkedList {
    * @returns {SinglyLinkedList} This list.
    */
   insertAtFront(data) {
-    const newNode = new Node(data);
+    const newHead = new Node(data);
+    newHead.next = this.head;
+    this.head = newHead;
+  }
 
-    if (this.isEmpty()) {
-      this.head = newNode;
-    } else {
-      this.h;
-    }
+  removeHead() {
+    if (this.isEmpty()) return null;
+    let currHead = this.head;
+
+    this.head = currHead.next;
+
+    return currHead.data;
   }
 
   /**
@@ -129,7 +134,7 @@ class SinglyLinkedList {
 // const biNodeList = new SinglyLinkedList().insertAtBackMany([1, 2]);
 // const firstThreeList = new SinglyLinkedList().insertAtBackMany([1, 2, 3]);
 // const secondThreeList = new SinglyLinkedList().insertAtBackMany([4, 5, 6]);
-// const unorderedList = new SinglyLinkedList().insertAtBackMany([-5, -10, 4, -3, 6, 1, -7, -2]);
+const unorderedList = new SinglyLinkedList().insertAtBackMany([-5, -10, 4, -3, 6, 1, -7, -2]);
 
 // /* node 4 connects to node 1, back to head */
 // const perfectLoopList = new SinglyLinkedList().insertAtBackMany([1, 2, 3, 4]);
@@ -145,13 +150,19 @@ class SinglyLinkedList {
 // console.log(firstThreeList.toArr());
 
 const SLL = new SinglyLinkedList();
-const node1 = new Node(1);
-const node2 = new Node(2);
-const node3 = new Node(3);
+// const node1 = new Node(1);
+// const node2 = new Node(2);
+// const node3 = new Node(3);
 
-SLL.head = node1;
-console.log(SLL);
+//SLL.head = node1;
+// console.log(SLL);
 SLL.insertAtBack(2);
-console.log('SLL Head -> ', SLL, 'SLL.head.next -> ', SLL.head.next);
+// console.log('SLL Head -> ', SLL, 'SLL.head.next -> ', SLL.head.next);
 SLL.insertAtBack(3);
-console.log('SLL Head -> ', SLL, 'SLL.head.next -> ', SLL.head.next);
+// console.log('SLL Head -> ', SLL, 'SLL.head.next -> ', SLL.head.next);
+
+SLL.insertAtFront(0);
+console.log('SLL Head ==> ', SLL);
+
+console.log(SLL.removeHead());
+console.log('SLL Head ==> ', SLL);

@@ -6,7 +6,7 @@ public class AdminUser
   implements HIPAACompliantAdmin, HIPAACompliantUser {
 
   // Inside class:
-  private ArrayList<String> securityIncidents;
+  private ArrayList<String> securityIncidents = new ArrayList<>();
   private String role;
 
   @Override
@@ -25,18 +25,18 @@ public class AdminUser
   public boolean accessAuthorized(Integer confirmedAuthID) {
     System.out.printf("Auth ID: %d ", confirmedAuthID);
     System.out.printf("this.id -> ", this.id);
-    if (confirmedAuthID.equals(this.id)) {
+
+    if (confirmedAuthID == (this.id)) {
       return true;
     } else {
-      String note = String.format("Datetime Submitted: %s, ", new Date());
-      newIncident(note);
+      authIncident();
       return false;
     }
   }
 
   // TO DO: Implement a constructor that takes an ID and a role
   public AdminUser(Integer id, String role) {
-    this.id = id;
+    super(id);
     this.role = role;
   }
 
