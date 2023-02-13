@@ -9,7 +9,11 @@ public class MainController {
 
   @RequestMapping("")
   public String index(
-    @RequestParam(value = "name", required = false) String searchQuery
+    @RequestParam(
+      value = "name",
+      required = false,
+      defaultValue = "Human"
+    ) String searchQuery
   ) {
     return "Hello " + searchQuery;
   }
