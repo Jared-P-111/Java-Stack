@@ -13,12 +13,12 @@ public class MainController {
   }
 
   @RequestMapping("/travel/{destination}")
-  public String showLesson(@PathVariable("destination") String destination) {
+  public String showTravel(@PathVariable("destination") String destination) {
     return "You will soon travel to " + destination;
   }
 
   @RequestMapping("/lotto/{lotto}")
-  public String showLesson(@PathVariable("lotto") int lotto) {
+  public String lotto(@PathVariable("lotto") int lotto) {
     String answer;
 
     if (lotto % 2 == 0) {
