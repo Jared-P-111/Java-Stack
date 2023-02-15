@@ -15,29 +15,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="/webjars/bootswatch/5.2.3/dist/slate/bootstrap.min.css" />
+    <link rel="stylesheet" href="/webjars/bootswatch/5.2.3/dist/vapor/bootstrap.min.css" />
   </head>
   <body>
-    <div class="container mt-5">
-      <table class="table table-hover">
-        <thead>
-          <tr>
-            <th scope="col">name</th>
-            <th scope="col">price</th>
-            <th scope="col">description</th>
-          </tr>
-        </thead>
-        <tbody>
-          <c:forEach var="fruit" items="${fruits}">
-            <tr class="table-active">
-              <td>${fruit.name}</td>
-              <td>${fruit.price}</td>
-              <td>${fruit.description}</td>
-            </tr>
-          </c:forEach>
-        </tbody>
-      </table>
-    </div>
+    <c:out value="${books.get(0).title}"></c:out>
   </body>
 </html>
-1
