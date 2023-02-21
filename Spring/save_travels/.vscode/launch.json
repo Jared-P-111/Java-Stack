@@ -1,0 +1,14 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Spring Boot-JaredpApplication<jaredp>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "project.com.jaredp.JaredpApplication",
+      "projectName": "jaredp",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
+    }
+  ]
+}
