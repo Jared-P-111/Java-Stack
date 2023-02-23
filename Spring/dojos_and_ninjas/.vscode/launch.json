@@ -1,0 +1,14 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Spring Boot-DojosAndNinjasApplication<dojos_and_ninjas>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "project.dojos_and_ninjas.DojosAndNinjasApplication",
+      "projectName": "dojos_and_ninjas",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
+    }
+  ]
+}
